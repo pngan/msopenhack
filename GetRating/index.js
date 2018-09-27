@@ -6,7 +6,7 @@ module.exports = function (context, req) {
 
     if (req.query.ratingId || (req.body && req.body.ratingId)) {
         context.res = {
-            // status: 200, /* Defaults to 200 */
+            status: 202, /* Defaults to 200 */
             body: context.bindings.ratingIdInput
         };
     }
