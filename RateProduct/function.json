@@ -1,0 +1,25 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "ProductRatings",
+      "collectionName": "Ratings",
+      "createIfNotExists": true,
+      "connection": "challengetwo_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

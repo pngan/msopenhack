@@ -1,0 +1,25 @@
+{
+  "bindings": [
+    {
+      "authLevel": "anonymous",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "documentDB",
+      "name": "userRatings",
+      "databaseName": "ProductRatings",
+      "collectionName": "Ratings",
+      "sqlQuery": "select * from Ratings r where r.userId={userId}",
+      "connection": "challengetwo_DOCUMENTDB",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}
